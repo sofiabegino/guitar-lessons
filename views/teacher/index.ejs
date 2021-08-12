@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fis</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@4.0.1/bulma/bulma.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+  <script src="https://kit.fontawesome.com/b55a362f2a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="/" class="goBack">
+    <i class="fas fa-chevron-left"></i>
+    <div class="hide-text">
+      <p>Volver</p>
+    </div>
+  </a>
+  <div class="cont">
+    <h1 style="font-weight: bold; font-size:50px;">Mis lecciones</h1>
+    <% chapters.forEach(function(chapter){ %>
+    <div class="cards" chapterId=<%= chapter._id %>>
+      <h4><%=chapter.title%></h4>
+      <p><%=chapter.description%></p>
+      <a class="deleteButton" id="eliminar"><img src="../assets/images/trash.png"></a>
+      <a href=<%= '/chapters/' + chapter._id + '/edit' %> id="editar"><img src="../assets/images/edit.png"></a>
+    </div>
+    <% }) %>
+    <div id="addChapter">
+      <a href="/chapters/new" class="addChapter">
+        <p>+</p>
+      </a>
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+<script src="/assets/javascript/teacher/index.js"></script>
+
+</html>

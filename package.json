@@ -1,0 +1,37 @@
+{
+  "name": "obligatorio2-begino-lombardi-tironi",
+  "version": "1.0.0",
+  "description": "[![Work in Repl.it](https://classroom.github.com/assets/work-in-replit-14baed9a392b3a25080506f3b7b6d57f295ec2978f6f33ec97e36a161684cbe9.svg)](https://classroom.github.com/online_ide?assignment_repo_id=319530&assignment_repo_type=GroupAssignmentRepo)",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./server.js localhost 3000",
+    "test": "DB_NAME=fis-obligatorio2-test jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ORT-FIS-202008/obligatorio2-begino-lombardi-tironi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORT-FIS-202008/obligatorio2-begino-lombardi-tironi/issues"
+  },
+  "homepage": "https://github.com/ORT-FIS-202008/obligatorio2-begino-lombardi-tironi#readme",
+  "dependencies": {
+    "@sweetalert2/theme-bulma": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.12",
+    "parsleyjs": "^2.9.2",
+    "supertest": "^6.0.1",
+    "sweetalert2": "^10.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6"
+  }
+}

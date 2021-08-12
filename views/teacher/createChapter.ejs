@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fis</title>
+  <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@4.0.1/bulma/bulma.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b55a362f2a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a href="/teacher" class="goBack">
+    <i class="fas fa-chevron-left"></i>
+    <div class="hide-text">
+      <p>Volver</p>
+    </div>
+  </a>
+  <div class="chapterContent">
+    <h1>Crear Capítulo</h1>
+
+    <div class="input-group mb-3">
+      <input required name="title" type="text" class="form-control inputChapter" placeholder="Nombre de la lección*"
+        aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <textarea maxlength="80" name="description" class="form-control textareaChapter"
+        placeholder="Descripción de la lección" aria-label="With textarea"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <textarea required name="content" class="form-control textareaContent" placeholder="Contenido de la lección*"
+        aria-label="With textarea"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <input name="songName" type="text" class="form-control inputChapter" placeholder="Nombre de la canción"
+        aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <br>
+    <h3 style="position: relative;">Tablatura:</h3>
+    <button class="buttonAddRow" id="addChord">
+      <img src="/assets/images/add.png">
+    </button>
+
+    <table class="table" id="tab">
+      <thead>
+        <tr>
+          <th scope="col">Cuerda - Traste <a class="info" data-toggle="popover" data-placement="right"
+              data-content="numero de cuerda 1 - numero de traste 1, ... , numero de cuerda n - numero de traste n. Ejemplo: 2-1, 4-8"
+              title="Formato" data-original-title="Help here">Info</a></th>
+          <th scope="col">Duración</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+    </table>
+    <br>
+    <br>
+    <div class="input-group mb-3">
+      <textarea name="tips" class="form-control textareaChapter" placeholder="Escribe aquí tips para los alumnos!"
+        aria-label="With textarea"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <button class="buttons" id="submitButton">Agregar</button>
+    </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+<script src="/assets/javascript/teacher/createChapter.js"></script>
+<script src="/assets/javascript/teacher/addRow.js"></script>
+
+</html>

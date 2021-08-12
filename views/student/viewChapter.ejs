@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fis</title>
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes@4.0.1/bulma/bulma.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/viewChapter.css">
+  <script src="https://kit.fontawesome.com/b55a362f2a.js" crossorigin="anonymous"></script>
+</head>
+
+<body chapterId=<%= chapter._id %>>
+  <div class="header">
+    <%= chapter.title %>
+    <a href="/student" class="goBack">
+      <i class="fas fa-chevron-left"></i>
+      <div class="hide-text">
+        <p>Volver</p>
+      </div>
+    </a>
+  </div>
+  </div>
+  <div class="rowWrapper">
+    <div class="title">Descripción</div>
+    <div class="description"><%= chapter.description %></div>
+    <div class="title">Contenido</div>
+    <div class="content"><%= chapter.content %></div>
+  </div>
+
+  <div class="playSong">
+    <div class="title"><%= chapter.songName %></div>
+    <div class="version">Live studio acoustic version</div>
+  </div>
+  <div class="tablature">
+    <div id="tablature"></div>
+  </div>
+
+  <div class="playSong">
+    <div class="titulo">Tips</div>
+  </div>
+  <div class="tips"><%= chapter.tips %></div>
+
+  <div class="buttonReady">
+    <i class="fas fa-check"></i>
+    <p>Finalizar</p>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/vexflow@3.0.9/releases/vexflow-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+<script src="/assets/javascript/student/viewChapter.js"></script>
+
+</html>
